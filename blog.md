@@ -300,7 +300,7 @@ def restaurant_create(request):
     form = RestaurantForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('restaurant_list')
+        return redirect('sim:restaurant_list')
     return render(request, 'restaurant_form.html', {'form': form})
 
 
@@ -309,7 +309,7 @@ def restaurant_update(request, pk):
     form = RestaurantForm(request.POST or None, instance=restaurant)
     if form.is_valid():
         form.save()
-        return redirect('restaurant_list')
+        return redirect('sim:restaurant_list')
     return render(request, 'restaurant_form.html', {'form': form})
 
 
