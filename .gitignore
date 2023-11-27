@@ -36,8 +36,6 @@ local_settings.py
 **/migrations/*.py
 **/migrations/*.pyc
 
-# Ignore settings file
-settings.py
 
 # Ignore secret key
 *.secret
